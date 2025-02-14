@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #9dc8eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: #ffe9e900;
+  color: #e01515;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-top: 0; /* Remove default margin from h1 */
+  text-align: center; /* Center-align text */
+}
+/* ... (your existing styles) ... */
+
+.product-container {
+  background-color: #add8e6; /* White background for product container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 50%; /* Set width to 50% */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  margin: 20px auto; /* Center the container */
+}
+
+.product-card {
+  margin: 10px auto; /* Center the product card */
+  padding: 15px;
+  border: 2px solid #333; /* Dark border for each product box */
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Adjust the width for the product details box */
+.product-details-box {
+  width: 30%; /* Set the desired width, adjust as needed */
+  margin: 20px auto; /* Center the box */
+  background-color: #a3d5f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid #000;
+}
+
+/* ... (your existing styles) ... */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th, td {
+  border: 4px solid #000;
+  padding: 15px;
+  text-align: center; /* Center-align text */
+}
+
+th {
+  background-color: #e01515; /* Header background color */
+  color: #fff; /* Header text color */
+}
+
+#select-product,
+#view-details {
+  background-color: #a3d5f7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  border: 4px solid #000;
+  width: 50%; /* Set width to 50% */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  margin-left: auto; /* Center the box */
+  margin-right: auto; /* Center the box */
+}
+
+/* Add this to your existing CSS file or create a new one */
+
+/* Your existing styles remain unchanged */
+
+/* Add the following styles for login and admin pages */
+
+.login-container {
+  background-image: url('https://cdn.dribbble.com/users/3568162/screenshots/14244352/media/e83c2bbde5ffa01db9bb4878abc4abda.png?resize=1000x750&vertical=center');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  width: 50%; /* Set width to 50% */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  margin-left: auto; /* Center the container */
+  margin-right: auto; /* Center the container */
+}
+
+.admin-container {
+  background-image: url('https://metro-website-images.s3.eu-west-1.amazonaws.com/plugins/user/images/about2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  width: 50%; /* Set width to 50% */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  margin-left: auto; /* Center the container */
+  margin-right: auto; /* Center the container */
+}
+.admin-switch-btn {
+  background-color: #4CAF50; /* Green background color for the button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none; /* Remove the default underline style */
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.admin-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* New styles for improved product input alignment */
+.product-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-input label {
+  width: 200px; /* Adjusted width for labels */
+}
+
+.product-input input {
+  flex: 1;
+  margin-left: 10px;
+  padding: 8px; /* Adjusted padding for better alignment */
+}
