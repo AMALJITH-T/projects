@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Records</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #4CAF50;
+        }
+
+        a.button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        /* Add some margin for the search form */
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Records</h1>
+
+    <!-- Add Employee button -->
+    <a href="{{ url_for('add_employee') }}" class="button">Add Employee</a>
+
+    <!-- Add a search form -->
+    <form method="get" action="{{ url_for('search_employee') }}">
+        <label for="search_id">Search by ID:</label>
+        <input type="number" name="id" id="search_id" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Experience</th>
+            <th>Department</th>
+            <th>Image</th> <!-- Added column for image -->
+            <th>Edit</th> <!-- Added column for edit -->
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>{{ employee.experience }}</td>
+            <td>{{ employee.department }}</td>
+            <td>
+                {% if employee.image %}
+                    <img src="{{ url_for('static', filename='images/' + employee.image) }}" alt="Employee Image">
+                {% else %}
+                    No Image
+                {% endif %}
+            </td>
+            <td><a href="{{ url_for('edit_employee_form', id=employee.id) }}">Edit</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Display search result -->
+    {% if search_result %}
+        <h2>Search Result</h2>
+        <p>ID: {{ search_result.id }}</p>
+        <p>Name: {{ search_result.name }}</p>
+        <p>Age: {{ search_result.age }}</p>
+        <p>Salary: {{ search_result.salary }}</p>
+        <p>Experience: {{ search_result.experience }}</p>
+        <p>Department: {{ search_result.department }}</p>
+        <p>
+            {% if search_result.image %}
+                <img src="{{ url_for('static', filename='images/' + search_result.image) }}" alt="Employee Image">
+            {% else %}
+                No Image
+            {% endif %}
+        </p>
+        <p><a href="{{ url_for('edit_employee', id=search_result.id) }}">Edit</a></p>
+    {% endif %}
+</body>
+</html>

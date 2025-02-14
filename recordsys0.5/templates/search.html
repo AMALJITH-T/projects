@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Result</h1>
+
+    {% if employee %}
+        <div class="card">
+            <!-- You can replace 'path/to/your/image.jpg' with the actual path to the image -->
+            <img src="{{ url_for('static', filename='path/to/your/image.jpg') }}" alt="Employee Image">
+            <p>ID: {{ employee.id }}</p>
+            <p>Name: {{ employee.name }}</p>
+            <p>Age: {{ employee.age }}</p>
+            <p>Salary: {{ employee.salary }}</p>
+            <p>Experience: {{ employee.experience }}</p>
+            <p>Department: {{ employee.department }}</p>
+            <p><a href="{{ url_for('edit_employee', id=employee.id) }}">Edit Employee</a></p>
+        </div>
+    {% else %}
+        <p>Employee not found</p>
+    {% endif %}
+</body>
+</html>

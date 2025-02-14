@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- Add your stylesheets or other dependencies here -->
+</head>
+<body>
+    <h2>Payment Page</h2>
+    <p>Please enter your payment details:</p>
+
+    <form action="{{ url_for('payment') }}" method="post">
+        <!-- Add your payment form fields here -->
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" required>
+
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <button type="submit">Submit Payment</button>
+    </form>
+</body>
+</html>

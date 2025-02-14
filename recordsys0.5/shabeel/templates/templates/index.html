@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section>
+        <h2>Hotel Features</h2>
+        <p>Welcome to Our Hotel! Discover the following features:</p>
+        <ul>
+            <li>Luxurious rooms with modern amenities</li>
+            <li>Stunning views of the city</li>
+            <li>On-site restaurant offering exquisite cuisine</li>
+            <li>Relaxing spa and wellness facilities</li>
+            <!-- Add more features as needed -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Available Rooms</h2>
+        <ul>
+            {% for room in rooms %}
+                <li>
+                    Room {{ room.room_number }} - {{ room.room_type }} - ${{ room.price }}
+                    <form action="{{ url_for('book_room') }}" method="post">
+                        <input type="hidden" name="room" value="{{ room.id }}">
+                        <label for="check_in_date">Check-in Date:</label>
+                        <input type="date" id="check_in_date" name="check_in_date" required>
+                        <label for="check_out_date">Check-out Date:</label>
+                        <input type="date" id="check_out_date" name="check_out_date" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
