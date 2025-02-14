@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Booking Details</title>
+    <!-- Add your stylesheets or other dependencies here -->
+</head>
+<body>
+    <h2>Proof of Booking</h2>
+    <p>Congratulations! Your room has been booked successfully.</p>
+
+    <h3>Booking Details:</h3>
+
+    <p>Thank you for choosing our hotel. We look forward to hosting you!</p>
+
+    <!-- Display booking details here -->
+    <p>Booking ID: {{ booking_id }}</p>
+    <p>Room Number: {{ room_number }}</p>
+    <p>Check-in Date: {{ check_in_date }}</p>
+    <p>Check-out Date: {{ check_out_date }}</p>
+    <!-- Add more details as needed -->
+
+</body>
+</html>

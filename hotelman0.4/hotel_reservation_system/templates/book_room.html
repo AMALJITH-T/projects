@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section class="room-container">
+        <h2>Available Rooms</h2>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('book_room') }}" method="post">
+            <label for="room">Select a Room:</label>
+            <select id="room" name="room" required>
+                {% for room in rooms %}
+                    <option value="{{ room.id }}">{{ room.room_number }} - {{ room.room_type }} - ${{ room.price }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="check_in_date">Check-in Date:</label>
+            <input type="date" id="check_in_date" name="check_in_date" required>
+
+            <label for="check_out_date">Check-out Date:</label>
+            <input type="date" id="check_out_date" name="check_out_date" required>
+
+            <button type="submit">Book Room</button>
+        </form>
+        <form method="post" action="{{ url_for('set_simulated_time') }}">
+            <label for="simulated_time">Simulated Current Time:</label>
+            <input type="datetime-local" id="simulated_time" name="simulated_time">
+            <button type="submit">Set</button>
+        </form>
+        <p>Current Time: {{ current_time }}</p>
+        
+    </section>
+{% endblock %}

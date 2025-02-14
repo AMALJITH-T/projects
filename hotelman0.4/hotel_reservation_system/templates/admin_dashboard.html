@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section>
+        <h2>Admin Dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Room</th>
+                    <th>Check-in Date</th>
+                    <th>Check-out Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reservation in reservations %}
+                    <tr>
+                        <td>{{ reservation.user.username }}</td>
+                        <td>{{ reservation.room.room_number }} - {{ reservation.room.room_type }}</td>
+                        <td>{{ reservation.check_in_date }}</td>
+                        <td>{{ reservation.check_out_date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}
