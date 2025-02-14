@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Flights</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .flight-info {
+            flex: 1;
+        }
+
+        .button {
+            background-color: #1900ff;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .book-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Available Flights</h2>
+        
+        <ul>
+            {% for flight in flights %}
+                <li>
+                    <div class="flight-info">
+                        <strong>Flight Number:</strong> {{ flight.flightNumber }}
+                        <br>
+                        <strong>Source:</strong> {{ flight.source }}
+                        <br>
+                        <strong>Destination:</strong> {{ flight.destination }}
+                        <br>
+                        <strong>Available Seats:</strong> {{ flight.availableSeats }}
+                        <br>
+                        <strong>Fare:</strong> ${{ flight.fare }}
+                    </div>
+                    <a href="{{ url_for('seat_selection', flightNumber=flight.flightNumber) }}" class="button">Book Now</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if flights %}
+            <p>Flights available!</p>
+        {% else %}
+            <p>No flights available!</p>
+        {% endif %}
+    </div>
+    
+    </body>
+    </html>
+    

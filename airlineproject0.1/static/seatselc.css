@@ -1,0 +1,132 @@
+.seat-selection-container {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    right: 0px;
+    bottom: -10px;
+
+}
+
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;}
+
+.seat-3a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 300px;
+}
+.seat-3b{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    left: 300px;
+
+}
+.seat-3c{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    left: 300px;
+
+}
+.seat-3d{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    left: 300px;
+
+}
+.seat-3e{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    left: 300px;
+
+}
+.seat-2a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 310px;
+    left: 10px;
+}
+.seat-2b{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 310px;
+    left: 10px;
+}
+.seat-2aa{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 310px;
+    left: 10px; 
+}
+.seat-2cc{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 371.5px;
+    left: 73px;
+}
+.seat-2dd{
+   
+    position: relative;
+    bottom: 375px;
+    left: 10px;
+}
+.seat-2ee{
+    position: relative;
+    bottom: 492px;
+    left: 74px;
+
+}
+.seat-2ff{
+    position: relative;
+    bottom: 489px;
+    left: 74px;
+
+}
+.seat {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.seat input {
+   cursor: pointer;
+}
+
+.seat label {
+    cursor: pointer;
+}
+
+.seat input:checked + label {
+    background-color: rgb(30, 72, 223)5, 0, 128;
+}
+
+button {
+    margin-top: 10px;
+    width: 106px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+}
+h2{
+    align-items: center;
+    position: relative;
+    right: -130px;
+}

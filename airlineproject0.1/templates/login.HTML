@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirLine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='LOGIN.css') }}">
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h4>Operator Login</h4>
+    <h1>AirLine</h1><br>
+    <h6><em>Fly Above The Sky</em></h6>
+
+    <div class="login-container">
+        <h2>User Login</h2>
+        <form action="{{ url_for('login') }}" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div><br>
+            <button type="submit" class="button">LOGIN</button>
+        </form>
+    </div>
+</body>
+</html>

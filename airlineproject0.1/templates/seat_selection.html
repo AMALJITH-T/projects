@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='seatselc.css') }}">
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="click">
+        <div class="seat-selection-container">
+            <h2>Select Your Seat</h2>
+            <form method="post" action="{{ url_for('seat_selection', flightNumber=flight.flightNumber) }}">
+                <div class="seat-map">
+                    <!-- Row 1 -->
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1A" name="seat[]" value="1A">
+                        <label for="seat-1A">1A</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1B" name="seat[]" value="1B">
+                        <label for="seat-1B">1B</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1C" name="seat[]" value="1C">
+                        <label for="seat-1C">1C</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1D" name="seat[]" value="1D">
+                        <label for="seat-1D">1D</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1E" name="seat[]" value="1E">
+                        <label for="seat-1E">1E</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-1F" name="seat[]" value="1F">
+                        <label for="seat-1F">1F</label>
+                    </div>
+                    <div class =  "seat-3b">
+                    <div class="seat">
+                        <input type="checkbox" id="seat-2C" name="seat[]" value="2C">
+                        <label for="seat-2C">2C</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-2D" name="seat[]" value="2D">
+                        <label for="seat-2D">2D</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-2E" name="seat[]" value="2E">
+                        <label for="seat-2E">2E</label>
+                    </div>
+                </div>
+                <div class =  "seat-3c">
+                    <div class="seat">
+                        <input type="checkbox" id="seat-3C" name="seat[]" value="3C">
+                        <label for="seat-3C">3C</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-3D" name="seat[]" value="3D">
+                        <label for="seat-3D">3D</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-3E" name="seat[]" value="3E">
+                        <label for="seat-3E">3E</label>
+                    </div>
+                </div>
+                <div class =  "seat-3d">
+                    <div class="seat">
+                        <input type="checkbox" id="seat-4C" name="seat[]" value="4C">
+                        <label for="seat-4C">4C</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-4D" name="seat[]" value="4D">
+                        <label for="seat-4D">4D</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-4E" name="seat[]" value="4E">
+                        <label for="seat-4E">4E</label>
+                    </div>
+                </div>
+                <div class =  "seat-3e">
+                    <div class="seat">
+                        <input type="checkbox" id="seat-5C" name="seat[]" value="5C">
+                        <label for="seat-5C">5C</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-5D" name="seat[]" value="5D">
+                        <label for="seat-5D">5D</label>
+                    </div>
+                    <div class="seat">
+                        <input type="checkbox" id="seat-5E" name="seat[]" value="5E">
+                        <label for="seat-5E">5E</label>
+                    </div>
+                <!-- Add more seat rows as needed -->
+                <button type="submit">Proceed</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

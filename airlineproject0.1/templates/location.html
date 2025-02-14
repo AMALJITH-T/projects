@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reservation System - Place Selection</title>
+    <style>
+        body{
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: contain;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url(https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-size: cover;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Place Selection</h2>
+    <form method="post" action="{{ url_for('search_flights') }}">
+        <label for="departure">Departure Place:</label>
+        <select id="departure" name="departure">
+            <option value="Thiruvananthapuram International Airport">Thiruvananthapuram International Airport</option>
+            <option value="Cochin International Airport">Cochin International Airport</option>
+            <option value="Kannur International Airport">Kannur International Airport</option>
+            <option value="Calicut International Airport">Calicut International Airport</option>
+            <option value="Singapore Changi Airport">Singapore Changi Airport</option>
+            <option value="Dubai International Airport">Dubai International Airport</option>
+            <option value="Hong Kong International Airport">Hong Kong International Airport</option>
+            <option value="Incheon International Airport">Incheon International Airport</option>
+            <option value="Haneda Airport">Haneda Airport</option>
+            <option value="Hamad International Airport">Hamad International Airport</option>
+        </select>
+
+        <label for="destination">Destination Place:</label>
+        <select id="destination" name="destination">
+            <option value="Thiruvananthapuram International Airport">Thiruvananthapuram International Airport</option>
+            <option value="Cochin International Airport">Cochin International Airport</option>
+            <option value="Kannur International Airport">Kannur International Airport</option>
+            <option value="Calicut International Airport">Calicut International Airport</option>
+            <option value="Singapore Changi Airport">Singapore Changi Airport</option>
+            <option value="Dubai International Airport">Dubai International Airport</option>
+            <option value="Hong Kong International Airport">Hong Kong International Airport</option>
+            <option value="Incheon International Airport">Incheon International Airport</option>
+            <option value="Haneda Airport">Haneda Airport</option>
+            <option value="Hamad International Airport">Hamad International Airport</option>
+        </select>
+
+        <button type="submit">Search Flights</button>
+    </form>
+</div>
+
+</body>
+</html>
