@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(https://cdn.pixabay.com/photo/2023/01/13/16/35/background-7716491_1280.png); /* Replace 'background.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white; /* Set text color to white for better visibility */
+            height:5px; /* Ensure the body takes the full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        form {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better contrast */
+            border-radius: 10px;
+        }
+
+        label, select, input, button {
+            margin: 10px;
+            padding: 15px;
+        }
+
+        h9 {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form action="/convert" method="post">
+        <label for="choice">Choose conversion:</label>
+        <select name="choice" id="choice">
+            <option value="1">Fahrenheit to Celsius</option>
+            <option value="2">Celsius to Fahrenheit</option>
+        </select>
+        <br>
+        <label for="temperature">Enter temperature:</label>
+        <input type="text" name="temperature" required>
+        <br>
+        <button type="submit">Convert</button>
+    </form>
+    <h9>Devoloped By Anandu RA2311003010722 & Josiah RA2311003010674</h9>
+</body>
+</html>
